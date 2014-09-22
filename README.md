@@ -49,7 +49,7 @@ capital letters within the variable names. See _Variable name details_ below.
 	  &gt;  &gt;  &gt; X_train.txt  
 	  &gt;  &gt;  &gt; y_train.txt  
 	  
-	   _Note the 2 "Inertial Signals" subdirectories are not used._
+Note the 2 "Inertial Signals" subdirectories are not used._
 	
 
 ### Variable name details
