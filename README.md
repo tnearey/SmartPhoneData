@@ -4,7 +4,7 @@ date: September 16, 2014
 
 
 ### Goal:  
-Produce a .csv file representing tidy data set with the average of each of several selected variable for each activity and each subject for the combined test and training data.  
+Produce a text file representing tidy data set with the average of each of several selected variables for each activity and each subject in the combined test and training data.  
 
 ### Running the script
 The script is called run_analysis.R
@@ -14,14 +14,14 @@ It produces a (whitespace delimited) text file called SmartphoneMeanStdevSummary
 in the same directory. It contains means within-subject and within - activity type
 of the variables whose original names have the substings -mean(), -std(), -freqMean().
 The variable names are simplified using a camelCase strategy... new words start with
-capital letters within the variable names. See variable name detaisl below.
+capital letters within the variable names. See _Variable name details_ below.
 
 ### Outline of process:
 * Stage 1. The "train" data files x\_train.txt, y\_train.txt and subjects\_train.txt are read and consolidated into a single data table. This is done via a call to the included function readTrainOrTest('train')  
 * Stage 2. The "test" data files x\_train.txt, y\_train.txt and subjects\_train.txt are read and consolidated into a single data table. This is done via a call to the included function readTrainOrTest('test')  
 * Stage 3. The variables are renamed programmatically using gsub and a home-grown function called camelCase included in the script.
 * Stage 4. The only  selected measured variables are extracted, namely the ones that originally had the substrings substings -mean(), -std(), -freqMean() n their names.
-* Stage 5. Package dplyr's summarise with a by_groups argument  is used to summarize the data. The call is quite cumbersome, so it has been created as a string programmatically and the string is execuated via eval(parse(text= <long string with necessary summarise command>)) [ See are comments in the script -- an alternate method is also shown in the included function checkSummariesAlternateWay()]
+* Stage 5. Package dplyr's summarise with a by_groups argument  is used to summarize the data. The call is quite cumbersome, so it has been created as a string programmatically and the string is execuated via `eval(parse(text= <long string with necessary summarise command>))`. See are comments in the script -- an alternate method is also shown in the included function `checkSummariesAlternateWay()`.
 * Stage 6. The resulting data frame is saved via write.table to the output text file
 
 
@@ -29,7 +29,8 @@ capital letters within the variable names. See variable name detaisl below.
 ###Implementation notes:
  The program knows about relies on the relative subdirectory
      structure of the data as unpacked from the zip file (downloaded from
-     http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones see file structure details.
+     []http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones]  
+     See* File structure details *below.
 
 
 ###File structure details
