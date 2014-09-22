@@ -29,7 +29,7 @@ capital letters within the variable names. See _Variable name details_ below.
 ###Implementation notes:
  The program knows about relies on the relative subdirectory
      structure of the data as unpacked from the zip file (downloaded from
-     []http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones]  
+     [http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones]  
      See* File structure details *below.
 
 
