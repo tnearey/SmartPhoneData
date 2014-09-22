@@ -21,17 +21,18 @@ capital letters within the variable names. See _Variable name details_ below.
 * Stage 2. The "test" data files x\_train.txt, y\_train.txt and subjects\_train.txt are read and consolidated into a single data table. This is done via a call to the included function `readTrainOrTest('test')`  
 * Stage 3. The variables are renamed programmatically using gsub and a home-grown function called camelCase included in the script.
 * Stage 4. The only  selected measured variables are extracted, namely the ones that originally had the substrings substings -mean(), -std(), -freqMean() n their names.
-* Stage 5. Package dplyr's summarise with a by_groups argument  is used to summarize the data. The call is quite cumbersome, so it has been created as a string programmatically and the string is execuated via `eval(parse(text= <long string with necessary summarise command>))`. See are comments in the script -- an alternate method is also shown in the included function `checkSummariesAlternateWay()`.
+* Stage 5. Package dplyr's summarise with a by_groups argument  is used to summarize the data. The call is quite cumbersome, so it has been created as a string programmatically and the string is execuated via `eval(parse(text= <long string with necessary summarise command>))`. See comments in the script. Also, an alternate method is shown in the included function `checkSummariesAlternateWay()`.
 * Stage 6. The resulting data frame is saved via write.table to the output text file
 
 
 
 ###Implementation notes:
- The program knows about relies on the relative subdirectory
+* The program knows about relies on the relative subdirectory
  structure of the data as unpacked from the zip file downloaded from
  [http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones]  
  See _File structure details_ below.
-
+* There is a logical flag called `DEVEL` near the top of the script. It is set to `TRUE` in the development version. When so set, it produces diagnostic information to the console. Setting to `FALSE` is meant to work without the extra output. It has NOT been tested as of this writing, however.
+* The DEVEL flag when set to `TRUE` has a _side effect_ of creating and checking for the existence of temporary .RData files. This was to save time in development because conversion of the text files was rather slow.
 
 ###File structure details
 	  There must be a child subdirectory named  "UCI HAR Dataset" with the original files as  unpacked. The file structure should include the following subtree of files:  
