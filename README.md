@@ -17,8 +17,8 @@ The variable names are simplified using a camelCase strategy... new words start 
 capital letters within the variable names. See _Variable name details_ below.
 
 ### Outline of process:
-* Stage 1. The "train" data files x\_train.txt, y\_train.txt and subjects\_train.txt are read and consolidated into a single data table. This is done via a call to the included function readTrainOrTest('train')  
-* Stage 2. The "test" data files x\_train.txt, y\_train.txt and subjects\_train.txt are read and consolidated into a single data table. This is done via a call to the included function readTrainOrTest('test')  
+* Stage 1. The "train" data files x\_train.txt, y\_train.txt and subjects\_train.txt are read and consolidated into a single data table. This is done via a call to the included function `readTrainOrTest('train')`  
+* Stage 2. The "test" data files x\_train.txt, y\_train.txt and subjects\_train.txt are read and consolidated into a single data table. This is done via a call to the included function `readTrainOrTest('test')`  
 * Stage 3. The variables are renamed programmatically using gsub and a home-grown function called camelCase included in the script.
 * Stage 4. The only  selected measured variables are extracted, namely the ones that originally had the substrings substings -mean(), -std(), -freqMean() n their names.
 * Stage 5. Package dplyr's summarise with a by_groups argument  is used to summarize the data. The call is quite cumbersome, so it has been created as a string programmatically and the string is execuated via `eval(parse(text= <long string with necessary summarise command>))`. See are comments in the script -- an alternate method is also shown in the included function `checkSummariesAlternateWay()`.
