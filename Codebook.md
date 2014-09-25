@@ -101,8 +101,9 @@ x --> y means x was renamed as y
 ```
 
 In addition, there there are two index (key columns) Columns:
-``` 80. is a subject id number (integer).
- 81. is an activity identifier, coded as a string.
+``` 
+80. is a subject id number (integer).
+81. is an activity identifier, coded as a string.
  ```
   The original names of the activities are taken verbatim from
    original file activity_labels.txt The names of these activities are:
