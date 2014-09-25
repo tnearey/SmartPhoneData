@@ -1,17 +1,16 @@
+#Codebook information#
+Note: This was submitted late. Since I really didn't understand the raw data, I'm mainly copying info from the original data web site, plus information in my README.md file in this repository.
 
-This was submitted late. Since I really didn't understand the raw data, I'm mainly copying info from the original data web site, plus
-information in my README.md file in this repository.
-
-The data in tidy_data.text represent summaries (in the form of averages [ arithmetic means] aggregated within  and tabulated by subject and within activity
-activity type. The summaries are of selected measurement variables described in the original data source.
+##Overview##  
+The data in tidy_data.text represent summaries (in the form of averages [ arithmetic means] aggregated within  and tabulated by subject and within activity activity type. The summaries are of selected measurement variables described in the original data source.
 
 The oroginal data source consitits of files unpacked from a zip file downloaded from the web site
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+<http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones>
 
 Information about the meaning of the measurements  the README.TXT and the features_info.txt files that were packed in the .zip file.
 These files  are copied below in the Appendix section below.
 
-The processed data is based on the following measurement variables, as well as subject numbers and the names of the activity types.
+The processed data is based on the following measurement variables, as well as subject numbers and the names of the activity types:
 
 Variables names involving mean and standard deviation in the original were simplified in structure
 using a 'camelCase' conversion and getting rid of ().
@@ -96,7 +95,7 @@ fBodyBodyGyroJerkMag-mean()  -->  fBodyBodyGyroJerkMagMean
 fBodyBodyGyroJerkMag-std()  -->  fBodyBodyGyroJerkMagStd 
 fBodyBodyGyroJerkMag-meanFreq()  -->  fBodyBodyGyroJerkMagMeanFreq 
 
-These constituted the first 79 columns of the data.
+The aggregated measurements constituted the first 79 columns of the data.
 They are real values in the original units of the raw data set (see the features_info.txt file in appendix 2 below)
 Column 80 is a subject id number
 Column 81 is an activity identifier, coded as a string. The original names of the activities are taken from
