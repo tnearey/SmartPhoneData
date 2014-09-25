@@ -1,7 +1,7 @@
 #Codebook information#
 Note: This was submitted late. Since I really didn't understand the raw data, I'm mainly copying info from the original data web site, plus information in my README.md file in this repository.
 
-##Overview##  
+##Overview
 The data in tidy_data.text represent summaries (in the form of averages [ arithmetic means] aggregated within  and tabulated by subject and within activity activity type. The summaries are of selected measurement variables described in the original data source.
 
 The oroginal data source consitits of files unpacked from a zip file downloaded from the web site
@@ -17,6 +17,7 @@ They are real values in the original units of the raw data set (see the features
 Variables names involving mean and standard deviation in the original were simplified in structure
 using a 'camelCase' conversion and getting rid of ().
 x --> y means x was renamed as y
+```
 1.		tBodyAcc-mean()-X		-->		tBodyAccMeanX
 2.		tBodyAcc-mean()-Y		-->		tBodyAccMeanY
 3.		tBodyAcc-mean()-Z		-->		tBodyAccMeanZ
@@ -97,12 +98,15 @@ x --> y means x was renamed as y
 78.		fBodyBodyGyroJerkMag-std()		-->		fBodyBodyGyroJerkMagStd
 79.		fBodyBodyGyroJerkMag-meanFreq()		-->		fBodyBodyGyroJerkMagMeanFreq
 
+```
 
+In addition, there there are two index (key columns) Columns:
+``` 80. is a subject id number (integer).
+ 81. is an activity identifier, coded as a string.
+ ```
+  The original names of the activities are taken verbatim from
+   original file activity_labels.txt The names of these activities are:
 
-Column 80 is a subject id number (integer)
-Column 81 is an activity identifier, coded as a string. The original names of the activities are taken from
-the codes in the original file activity_labels.txt
-They are:
 ```
 1 WALKING
 2 WALKING_UPSTAIRS
@@ -178,6 +182,7 @@ Notes:
 For more information about this dataset contact: activityrecognition@smartlab.ws
 ```
 ## Appendix 2: Original features_info.txt file:
+
 ```
 Feature Selection
 =================
@@ -238,3 +243,4 @@ tBodyGyroMean
 tBodyGyroJerkMean
 
 The complete list of variables of each feature vector is available in 'features.txt'
+```
